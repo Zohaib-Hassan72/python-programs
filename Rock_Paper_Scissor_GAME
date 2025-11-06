@@ -1,0 +1,40 @@
+import random
+def Game():
+    rock = "r"
+    paper = "p"
+    scissor = "s"
+    dict = {"rock":"r" ,"scissor":"s" ,
+            "paper":"p"
+            }
+    while True:
+        user_1 = input("Player 1 Enter your choice...>")
+        user_2 = random.choice(["r","p","s"])
+        print("computer select", user_2)
+            
+        if user_1 == rock and user_2 == scissor:
+            print("Rock always beats Scissors! You win")
+
+        elif user_1 == scissor and user_2 == rock:
+            print("Rock always beats Scissors! Computer win")
+
+        elif user_1 == scissor and user_2 == paper:
+            print("Scissors cut Paper! You win")
+
+        elif user_1 == paper and user_2 == scissor:
+            print("Scissors cut Paper! Computer win")
+
+        elif user_1 == rock and user_2 == paper:
+            print("Paper covers Rock! Computer Win win")
+
+        elif user_1 == paper and user_2 == rock:
+            print("Paper covers Rock! You win")
+
+
+        elif user_1 and user_2 == rock:
+            print("DRAW")
+        elif user_1 and user_2 == scissor:
+            print("DRAW")
+        elif user_1 and user_2 == paper:
+            print("DRAW")
+
+Game()
